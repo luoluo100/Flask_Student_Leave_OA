@@ -21,7 +21,7 @@ This is a simple falsk project,on completing the work of leaving students and Te
 * 理清学生请假与老师批假之间的关系，做到不重复请假
 
 
-## 页面展示
+## js函数代码展示
 
 ```html
     <script type="text/javascript">
