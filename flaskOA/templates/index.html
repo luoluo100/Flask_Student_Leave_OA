@@ -1,0 +1,38 @@
+{% extends 'blank.html' %}
+
+{% block title %}
+学生总表
+{% endblock %}
+
+{% block content %}
+
+    <a href="/addStudent/" class="btn btn-primary" style="float: right;color: antiquewhite">添加学生</a>
+    <br>
+    <br>
+    <br>
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr >
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>电话</th>
+                <th>地址</th>
+                <th>请假状态</th>
+            </tr>
+            {% for stu in students %}
+                <tr>
+                    <td>{{stu.name}}</td>
+                    <td>{{stu.age}}</td>
+                    <td>{{stu.gender}}</td>
+                    <td>{{stu.phone}}</td>
+                    <td>{{stu.address}}</td>
+                    <td>{{stu.holiday}}</td>
+                </tr>
+            {% endfor %}
+        </thead>
+    </table>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

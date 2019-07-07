@@ -1,0 +1,30 @@
+{% extends 'blank.html' %}
+{% block title %}
+老师视图-待批准学生
+{% endblock %}
+
+{% block content %}
+
+<table class="table table-bordered text-center">
+        <thead>
+            <tr >
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>电话</th>
+                <th>地址</th>
+                <th>操作</th>
+            </tr>
+            {% for stu in students %}
+                <tr>
+                    <td>{{stu.name}}</td>
+                    <td>{{stu.age}}</td>
+                    <td>{{stu.gender}}</td>
+                    <td>{{stu.phone}}</td>
+                    <td>{{stu.address}}</td>
+                    <td><a href="/pj/{{stu.id}}/" class=" btn btn-primary" style="color: #be2617">批准</a></td>
+                </tr>
+            {% endfor %}
+        </thead>
+    </table>
+{% endblock %}

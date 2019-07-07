@@ -1,0 +1,28 @@
+{% extends 'blank.html' %}
+{% block title %}
+添加学生
+{% endblock %}
+{% block content %}
+<form class="form-group" method="post">
+    <input type="text" class="form-control" placeholder="姓名" name="name">
+    <br>
+    <input type="text" class="form-control" placeholder="年龄" name="age">
+    <br>
+    <input type="text" class="form-control" placeholder="性别" name="gender">
+    <br>
+    <input type="email" class="form-control" placeholder="邮箱" name="email">
+    <br>
+    <input type="text" class="form-control" placeholder="电话" name="phone">
+    <br>
+    <input type="text" class="form-control" placeholder="地址" name="address">
+    <br>
+    <select class="btn-block input-group-text" name="mariy">
+        <option  value=0>婚姻状况</option>
+        <option value=1>已婚</option>
+        <option  value=2>未婚</option>
+        <option  value=3>离异</option>
+    </select>
+    <br>
+    <input class="btn btn-primary btn-block" type="submit" value="提交">
+</form>
+{% endblock %}
